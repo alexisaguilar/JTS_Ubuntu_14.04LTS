@@ -319,14 +319,6 @@ function install_portsentry() {
 # 25. Reiniciar servidor
 function final_step() {
     write_title "26. Finalizar deploy"
-    add_command_vhostadd  # Agrego comando vhostadd
-    echo "
-    Para hospedar un nuevo sitio que corra en PHP, use:
-        vhostadd -s dominio.com -l php 
-    
-    Para hospedar un nuevo sitio que corra en Python (SIN Django), use:
-        vhostadd -s dominio.com -l python 
-    "
     replace USERNAME $username SERVERIP $serverip < templates/texts/bye
     echo -n " ¿Ha podido conectarse por SHH como $username? (y/n) "
     read respuesta
