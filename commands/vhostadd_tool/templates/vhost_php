@@ -1,0 +1,12 @@
+<VirtualHost *:80>
+    ServerName SERVERNAME
+
+    DocumentRoot /srv/websites/SERVERNAME/application
+    ErrorLog /srv/websites/SERVERNAME/logs/errors.log
+    CustomLog /srv/websites/SERVERNAME/logs/access.log combined
+
+    <Directory />
+        Options -Indexes
+        AllowOverride All
+    </Directory>
+</VirtualHost>
